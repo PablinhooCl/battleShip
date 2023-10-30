@@ -35,16 +35,17 @@ body{
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 3fr;
-    height: 100%;
-    width: 100%;
+    height: 800px;
+    width: 1200px;
     padding: 4%;
+    align-self: center;
 }
 #cpu{
     grid-area: 2/ 1/ 3/ 2;
     display: flex;
     flex-wrap: wrap;
 }
-#player1{
+#player{
     grid-area: 1/ 2/ 2/ 3;
     display: flex;
     flex-wrap: wrap;
@@ -56,7 +57,7 @@ body{
     width: 12.5%;
     height: 12.5%;
 }
-#player1 *{
+#player *{
     box-sizing: border-box;
     background-color: blue;
     border: 0.5px solid gray;
@@ -137,4 +138,13 @@ body{
     display: flex; 
     flex: 1;
     border: solid grey 1px;
+}
+#cpu>div{
+    text-align: center;
+    font-size: 45px;
+}
+#player>div{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
 }
