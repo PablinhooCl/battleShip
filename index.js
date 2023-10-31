@@ -265,3 +265,25 @@ function fixCpuBoard(){
         cpuBoard.style.backgroundColor= 'aqua'
     })
 }
+const shipErrorDisplay= document.getElementById('shipError')
+const gameDoneDisplay= document.getElementById('gameDone')
+const overlayActivator= document.getElementById('overlay')
+const closeAddBookModal = () => {
+    shipErrorDisplay.classList.remove('actived')
+    overlayActivator.classList.remove('actived')
+    gameDoneDisplay.classList.remove('actived')
+};
+const handleKeyboardInput = (e) => {
+    if (e.key === 'Escape') closeAddBookModal()
+  };
+  overlayActivator.onclick = closeAddBookModal;
+  window.onkeydown = handleKeyboardInput
+  function shipError(){
+    shipErrorDisplay.classList.add('actived')
+    overlayActivator.classList.add('actived')
+
+  }
+  function gameDoneShow(){
+    gameDoneDisplay.classList.add('actived')
+    overlayActivator.classList.add('actived')
+  }

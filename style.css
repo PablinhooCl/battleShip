@@ -148,3 +148,65 @@ body{
     font-size: 15px;
     font-weight: bolder;
 }
+#eventDisplayer{
+    display: flex;
+    flex-direction: column;
+    grid-area: 2/ 2/ 3/ 3;
+    margin-top: 10px;
+    overflow: scroll;
+    height: 450px;
+}
+#eventDisplayer>div{
+    padding-left: 10px;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+#overlay.actived {
+    display: block;
+}
+#shipError{
+    position: fixed;
+    display: none;
+    z-index: 3;
+    background-color: antiquewhite;
+    width: 435px;
+    height: 120px;
+    border: 1px solid black;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#shipError.actived {
+    display: flex;
+}
+#gameDone{
+    position: fixed;
+    display: none;
+    z-index: 3;
+    background-color: antiquewhite;
+    width: 435px;
+    height: 120px;
+    border: 1px solid black;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#gameDone.actived {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
